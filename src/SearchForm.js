@@ -42,7 +42,7 @@ export default function SearchForm() {
       />
 
       <button
-        type="button"
+        type="submit"
         className="btn btn-outline-primary p-md-2 btn-sm-sm shadow-sm vw-70 search-button"
         onSubmit={handleSubmit}
       >
@@ -74,8 +74,9 @@ export default function SearchForm() {
               alt={weather.description}
             />
             <strong className="m-3 currentTemp h1">
-              {Math.round(weather.temperature)}°C
-            </strong>
+              {Math.round(weather.temperature)}
+            </strong>{" "}
+            <span className="units">°C</span>
           </div>
           <div className="col weather-details d-flex m-md-5 m-sm-3 ">
             <ul className="tab">

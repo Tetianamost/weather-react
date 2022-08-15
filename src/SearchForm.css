@@ -41,7 +41,6 @@
   color: #f0fbff;
 }
 .weather-details {
-  font-style: italic;
   font-size: smaller;
 }
 .tab {
@@ -57,8 +56,10 @@
 }
 .currentTemp {
   font-size: 40px;
-
-  /* text-shadow: 1px 1px #142533; */
+}
+.units {
+  position: relative;
+  top: -7px;
 }
 
 @media (max-width: 800px) {
