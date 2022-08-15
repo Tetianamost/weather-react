@@ -60,21 +60,14 @@ export default function SearchForm() {
     return (
       <div className="searchWeather row">
         {form}
-        <div className="col d-flex justify-content-around m-3">
-          <ul className="tab  d-flex flex-column my-5">
+        <div className=" d-flex m-md-3">
+          <ul className="tab  my-5">
             <li className="h3">{city}</li>
             <li className="h6">{weather.description}</li>
           </ul>
         </div>
-        <div className="col weather-details d-flex m-5 align-items-end flex-column">
-          <ul className="tab">
-            <li>Feels like: {Math.round(weather.feels)}°C</li>
-            <li>Wind: {Math.round(weather.wind)} mph</li>
-            <li>Humidity: {weather.humidity}%</li>
-          </ul>
-        </div>
         <div className="row">
-          <div className="col d-flex justify-content-center">
+          <div className="col d-flex align-items-center">
             <img
               className="icon ms-3"
               src={weather.icon}
@@ -83,6 +76,13 @@ export default function SearchForm() {
             <strong className="m-3 currentTemp h1">
               {Math.round(weather.temperature)}°C
             </strong>
+          </div>
+          <div className="col weather-details d-flex m-md-5 m-sm-3 ">
+            <ul className="tab">
+              <li>Feels like: {Math.round(weather.feels)}°C</li>
+              <li>Wind: {Math.round(weather.wind)} mph</li>
+              <li>Humidity: {weather.humidity}%</li>
+            </ul>
           </div>
         </div>
       </div>
