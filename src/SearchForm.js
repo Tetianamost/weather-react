@@ -34,7 +34,7 @@ export default function SearchForm() {
     >
       <input
         className="form-control p-md-6 me-auto inner-input"
-        type="text"
+        type="search"
         autoFocus="on"
         autoComplete="off"
         placeholder="Enter a city"
