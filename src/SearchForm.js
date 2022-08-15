@@ -44,6 +44,7 @@ export default function SearchForm() {
       <button
         type="button"
         className="btn btn-outline-primary p-md-2 btn-sm-sm shadow-sm vw-70 search-button"
+        onSubmit={handleSubmit}
       >
         Search
       </button>
