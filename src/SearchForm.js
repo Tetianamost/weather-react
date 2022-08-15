@@ -4,11 +4,11 @@ import "./SearchForm.css";
 
 export default function SearchForm() {
   const [city, setCity] = useState("");
-  const [loaded, setLoaded] = useState(false);
-  const [weather, setWeather] = useState(null);
+
+  const [weather, setWeather] = useState({ loaded: false });
   function showWeather(response) {
-    setLoaded(true);
     setWeather({
+      loaded: true,
       description: response.data.weather[0].description,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
@@ -56,7 +56,7 @@ export default function SearchForm() {
       </button>
     </form>
   );
-  if (loaded) {
+  if (weather.loaded) {
     return (
       <div className="searchWeather row">
         {form}
