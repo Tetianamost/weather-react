@@ -68,7 +68,6 @@ export default function SearchForm(props) {
       </div>
     );
   } else {
-    handleSubmit();
     return form;
   }
 }
