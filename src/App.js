@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <div className="container main-box background-images">
-        <SearchForm />
+        <SearchForm defaultCity="Denver" />
       </div>
       <Alerts />
       <Footer />

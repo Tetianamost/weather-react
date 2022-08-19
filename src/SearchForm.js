@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./SearchForm.css";
 import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 
-export default function SearchForm() {
-  const [city, setCity] = useState("");
+export default function SearchForm(props) {
+  const [city, setCity] = useState(props.defaultCity);
   const [weather, setWeather] = useState({ loaded: false });
   function showWeather(response) {
     setWeather({
@@ -16,6 +17,7 @@ export default function SearchForm() {
       humidity: response.data.main.humidity,
       feels: response.data.main.feels_like,
       icon: `./media/icons/${response.data.weather[0].icon}.svg`,
+      city: response.data.name,
     });
   }
   function handleSubmit(event) {
@@ -62,35 +64,11 @@ export default function SearchForm() {
       <div className="searchWeather row">
         <FormattedDate date={weather.date} />
         {form}
-        <div className=" d-flex m-md-3">
-          <ul className="tab  my-5">
-            <li className="h3">{city}</li>
-            <li className="h6">{weather.description}</li>
-          </ul>
-        </div>
-        <div className="row">
-          <div className="col d-flex align-items-center">
-            <img
-              className="icon ms-3"
-              src={weather.icon}
-              alt={weather.description}
-            />
-            <strong className="m-3 currentTemp h1">
-              {Math.round(weather.temperature)}
-            </strong>{" "}
-            <span className="units">°C</span>
-          </div>
-          <div className="col weather-details d-flex m-md-5 m-sm-3 ">
-            <ul className="tab">
-              <li>Feels like: {Math.round(weather.feels)}°C</li>
-              <li>Wind: {Math.round(weather.wind)} mph</li>
-              <li>Humidity: {weather.humidity}%</li>
-            </ul>
-          </div>
-        </div>
+        <WeatherInfo data={weather} />
       </div>
     );
   } else {
+    handleSubmit();
     return form;
   }
 }
