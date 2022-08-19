@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./SearchForm.css";
+import FormattedDate from "./FormattedDate";
 
 export default function SearchForm() {
   const [city, setCity] = useState("");
-
   const [weather, setWeather] = useState({ loaded: false });
   function showWeather(response) {
     setWeather({
       loaded: true,
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
@@ -59,6 +60,7 @@ export default function SearchForm() {
   if (weather.loaded) {
     return (
       <div className="searchWeather row">
+        <FormattedDate date={weather.date} />
         {form}
         <div className=" d-flex m-md-3">
           <ul className="tab  my-5">
