@@ -17,7 +17,7 @@ li::first-letter {
 
 .main-box,
 .background-images {
-  border: 1px solid rgb(116, 116, 128, 0.4);
+  border: 1px solid linear-gradient(to top, #e5eef7, #d8e5f1, #dbe7f3, #b0dae9);
   border-radius: 5px;
   width: 600px;
   height: 600px;

@@ -60,6 +60,7 @@
 .units {
   position: relative;
   top: -7px;
+  left: -11px;
 }
 
 @media (max-width: 800px) {
