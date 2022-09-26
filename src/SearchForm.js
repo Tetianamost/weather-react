@@ -70,7 +70,7 @@ export default function SearchForm(props) {
           <WeatherInfo data={weather} />
         </div>
         <div>
-          <WeatherForecast coord={weather.coord} />
+          <WeatherForecast coord={weather.coord} icon={weather.icon} />
         </div>
       </div>
     );
