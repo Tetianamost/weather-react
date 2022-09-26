@@ -41,6 +41,7 @@
 }
 .weather-details {
   font-size: smaller;
+  color: black;
 }
 .tab {
   background-color: rgba(4, 43, 58, 0.5);

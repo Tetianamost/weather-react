@@ -21,8 +21,8 @@ export default function WeatherInfo(props) {
           </strong>{" "}
           <span className="units">°C</span>
         </div>
-        <div className="col weather-details d-flex m-md-5 m-sm-3 ">
-          <ul className="tab">
+        <div className="col weather-details d-flex m-md-5 m-sm-3">
+          <ul>
             <li>Feels like: {Math.round(props.data.feels)}°C</li>
             <li>Wind: {Math.round(props.data.wind)} mph</li>
             <li>Humidity: {props.data.humidity}%</li>
