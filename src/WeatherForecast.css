@@ -1,5 +1,6 @@
 .WeatherForecast {
   text-align: center;
+  color: bisque;
 }
 .WeatherForecast-temp-min {
   opacity: 0.6;
@@ -8,4 +9,29 @@
 .icon-sm {
   width: 51px;
   height: 51px;
+}
+.tab-forecast {
+  background-color: rgba(4, 43, 58, 0.5);
+  border-radius: 40%;
+  margin-left: 25px;
+  margin-right: 5px;
+}
+@media (max-width: 800px) {
+  .WeatherForecast {
+    display: flex;
+    justify-content: space-evenly;
+    color: bisque;
+  }
+  .WeatherForecast-temp {
+    font-size: smaller;
+  }
+  .icon-sm {
+    width: 41px;
+    height: 41px;
+  }
+  .tab-forecast {
+    background-color: rgba(4, 43, 58, 0.5);
+    border-radius: 40%;
+    margin-left: 3px;
+  }
 }

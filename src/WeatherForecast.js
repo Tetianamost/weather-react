@@ -30,9 +30,9 @@ export default function WeatherForecast(props) {
       <div className="WeatherForecast">
         <div className="row mt-4">
           {forecast.map(function (dailyForecast, index) {
-            if (index < 5) {
+            if (index < 4) {
               return (
-                <div className="col-2 col-md">
+                <div className="col justify-content-space-between tab-forecast">
                   <WeatherForecastDay data={dailyForecast} icon={props.icon} />
                 </div>
               );

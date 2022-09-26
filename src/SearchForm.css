@@ -41,6 +41,7 @@
 }
 .weather-details {
   font-size: smaller;
+  font-weight: bold;
   color: black;
 }
 .tab {
@@ -72,5 +73,10 @@
   .tab {
     padding: 0 8%;
     margin: -35px auto;
+  }
+  .weather-details {
+    font-size: small;
+    font-weight: bold;
+    color: black;
   }
 }
