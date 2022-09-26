@@ -18,7 +18,7 @@ export default function SearchForm(props) {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       feels: response.data.main.feels_like,
-      icon: `./media/icons/${response.data.weather[0].icon}.svg`,
+      icon: `/media/icons/${response.data.weather[0].icon}.svg`,
       city: response.data.name,
     });
   }
