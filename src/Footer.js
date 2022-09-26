@@ -7,7 +7,7 @@ export default function Footer() {
       <img className="my-image" src={Image} alt="tetiana_mostova" />
       <span className="coded-by text-muted">
         <a
-          href="https://github.com/Tetianamost/my-awesome-weather-app.git"
+          href="https://github.com/Tetianamost/weather-react"
           target="_blank"
           rel="noreferrer noopener"
         >
