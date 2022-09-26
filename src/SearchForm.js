@@ -3,6 +3,7 @@ import axios from "axios";
 import "./SearchForm.css";
 import FormattedDate from "./FormattedDate";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function SearchForm(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -10,6 +11,7 @@ export default function SearchForm(props) {
   function showWeather(response) {
     setWeather({
       loaded: true,
+      coord: response.data.coord,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       temperature: response.data.main.temp,
@@ -23,7 +25,7 @@ export default function SearchForm(props) {
   function handleSubmit(event) {
     event.preventDefault();
 
-    let apiKey = "e1956e988b4e323dd9d87160c0a34f29";
+    let apiKey = "8a5d76456deba91ab9c6a8a37ee7b662";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showWeather);
   }
@@ -61,10 +63,15 @@ export default function SearchForm(props) {
   );
   if (weather.loaded) {
     return (
-      <div className="searchWeather row">
-        <FormattedDate date={weather.date} />
-        {form}
-        <WeatherInfo data={weather} />
+      <div>
+        <div className="searchWeather row">
+          <FormattedDate date={weather.date} />
+          {form}
+          <WeatherInfo data={weather} />
+        </div>
+        <div>
+          <WeatherForecast coord={weather.coord} />
+        </div>
       </div>
     );
   } else {
