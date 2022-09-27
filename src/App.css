@@ -19,6 +19,7 @@ li::first-letter {
 .background-images {
   border: 1px solid linear-gradient(to top, #e5eef7, #d8e5f1, #dbe7f3, #b0dae9);
   border-radius: 5px;
+  max-width: 450%;
   width: 600px;
   height: 666px;
   margin: 0 auto;
@@ -54,12 +55,15 @@ li::first-letter {
   text-transform: uppercase;
   max-width: 600px;
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   body {
     font-size: 19px;
   }
-
-  .main-box {
+  .App {
+    margin: 0;
+  }
+  .main-box,
+  .background-images {
     width: 100%;
     height: 800px;
   }
