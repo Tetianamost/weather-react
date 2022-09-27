@@ -61,11 +61,6 @@ li::first-letter {
 
   .main-box {
     width: 100%;
-
     height: 800px;
-
-    height: 100%;
-
-    margin: -10px auto;
   }
 }
