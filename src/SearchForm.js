@@ -41,7 +41,7 @@ export default function SearchForm(props) {
         <div className="searchWeather row">
           <FormattedDate date={weather.date} />
           <form
-            className=" hstack gap-2 px-2 enter-city mt-4"
+            className=" hstack gap-2 px-4 enter-city mt-4 "
             onSubmit={handleSubmit}
           >
             <input
