@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 export default function SlideDays(props) {
   const [index, setIndex] = useState(0);
+  let day = [props.data, props.icon];
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
@@ -22,7 +23,7 @@ export default function SlideDays(props) {
           <span aria-hidden="true" className="carousel-control-prev-icon" />
         }
       >
-        <Carousel.Item>{props}</Carousel.Item>
+        <Carousel.Item>{day}</Carousel.Item>
       </Carousel>
     </div>
   );
