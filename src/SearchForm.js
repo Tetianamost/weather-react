@@ -62,7 +62,7 @@ export default function SearchForm(props) {
             </button>
             <button
               type="button"
-              className="btn btn-info btn-sm-sm shadow-sm current"
+              className="btn btn-info btn-sm-sm shadow-sm current mb-2"
             >
               Current
             </button>
