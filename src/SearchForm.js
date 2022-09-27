@@ -15,9 +15,14 @@ export default function SearchForm(props) {
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       temperature: response.data.main.temp,
+      tempMin: response.data.main.temp_min,
+      tempMax: response.data.main.temp_max,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       feels: response.data.main.feels_like,
+      sunset: response.data.sys.sunset,
+      sunrise: response.data.sys.sunrise,
+      pressure: response.data.main.pressure,
       icon: `/media/icons/${response.data.weather[0].icon}.svg`,
       city: response.data.name,
     });
@@ -33,6 +38,20 @@ export default function SearchForm(props) {
   }
   function updateCity(event) {
     setCity(event.target.value);
+  }
+  function locateMe() {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      let apiKey = "f3009e4852fa0a079dab291dabf020c4";
+      let lat = position.coords.latitude;
+      let lon = position.coords.longitude;
+      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+      axios.get(apiUrl).then(showWeather);
+    });
+  }
+
+  function getPosition(event) {
+    event.preventDefault();
+    locateMe();
   }
 
   if (weather.loaded) {
@@ -58,19 +77,20 @@ export default function SearchForm(props) {
               className="btn btn-outline-primary p-1 p-md-2 shadow-sm mb-2 mb-md-0 mx-1 search-button"
               onSubmit={handleSubmit}
             >
-              Search
+              <i class="fa-solid fa-magnifying-glass"></i>
             </button>
             <button
               type="button"
               className="btn btn-info btn-sm-sm p-2 shadow-sm current mb-2 mx-1 mb-md-0"
+              onClick={getPosition}
             >
-              Current
+              <i class="fa-solid fa-location-arrow"></i>
             </button>
           </form>
           <WeatherInfo data={weather} />
         </div>
         <div>
-          <WeatherForecast coord={weather.coord} icon={weather.icon} />
+          <WeatherForecast coord={weather.coord} />
         </div>
       </div>
     );

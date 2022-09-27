@@ -1,6 +1,11 @@
 import React from "react";
 
 export default function WeatherInfo(props) {
+  let tempMax = Math.round(props.data.tempMax);
+  let feels = Math.round(props.data.feels);
+  let tempMin = Math.round(props.data.tempMin);
+  let humidity = props.data.humidity;
+  let wind = Math.round(props.data.wind);
   return (
     <div>
       <div className=" d-flex">
@@ -9,7 +14,7 @@ export default function WeatherInfo(props) {
           <li className="h6">{props.data.description}</li>
         </ul>
       </div>
-      <div className="row">
+      <div className="row weatherInfo">
         <div className="col d-flex align-items-center">
           <img
             className="icon ms-3"
@@ -23,9 +28,23 @@ export default function WeatherInfo(props) {
         </div>
         <div className="col weather-details d-flex m-md-5 m-sm-3">
           <ul>
-            <li>Feels like: {Math.round(props.data.feels)}°C</li>
-            <li>Wind: {Math.round(props.data.wind)} mph</li>
-            <li>Humidity: {props.data.humidity}%</li>
+            <li>
+              <i class="fa-solid fa-arrow-down"> </i>&nbsp; {tempMin}°
+            </li>
+            <li>
+              <i class="fa-solid fa-arrow-up"> </i>&nbsp; {tempMax}°
+            </li>
+            <li>
+              <i className="fa-solid fa-temperature-half"> </i>
+              &nbsp; {feels}°C
+            </li>
+            <li>
+              <i className="fa-solid fa-wind"> </i>&nbsp; {wind} mph
+            </li>
+
+            <li>
+              <i className="fa-solid fa-droplet"></i> &nbsp;{humidity}%
+            </li>
           </ul>
         </div>
       </div>

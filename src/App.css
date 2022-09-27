@@ -1,6 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 19px;
+  font-size: 21px;
   margin: 0;
   padding: 0;
   background: linear-gradient(to top, #e5eef7, #d8e5f1, #dbe7f3, #b0dae9);
@@ -20,8 +20,8 @@ li::first-letter {
   border: 1px solid linear-gradient(to top, #e5eef7, #d8e5f1, #dbe7f3, #b0dae9);
   border-radius: 5px;
   width: 600px;
-  height: 600px;
-  margin: 25px auto;
+  height: 666px;
+  margin: 0 auto;
   padding: 25px;
   background: url("./media/bg/beach-clear-birds.jpg");
   background-size: auto 800px;
@@ -29,11 +29,6 @@ li::first-letter {
   background-position: center center;
 }
 
-section {
-  color: #f0fbff;
-  background-color: rgba(129, 219, 255, 0.1);
-  border-radius: 5px;
-}
 .weather-forecast-date {
   opacity: 0.8;
 }
@@ -61,15 +56,16 @@ section {
 }
 @media (max-width: 800px) {
   body {
-    font-size: 17px;
+    font-size: 19px;
   }
 
   .main-box {
     width: 100%;
-<<<<<<< Updated upstream
-=======
+
     height: 800px;
->>>>>>> Stashed changes
+
+    height: 100%;
+
     margin: -10px auto;
   }
 }
