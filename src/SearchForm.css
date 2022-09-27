@@ -5,10 +5,9 @@
 }
 
 .search-button {
-  display: flex;
-  color: #38729f;
+  color: #081620;
   border-color: #8bb0c0;
-  background-color: #fafafa;
+  background-color: #88f9ea;
   transition: all 150ms solid;
 }
 .search-button:focus {
