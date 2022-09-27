@@ -63,8 +63,13 @@ section {
   body {
     font-size: 17px;
   }
+
   .main-box {
     width: 100%;
+<<<<<<< Updated upstream
+=======
+    height: 800px;
+>>>>>>> Stashed changes
     margin: -10px auto;
   }
 }

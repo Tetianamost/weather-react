@@ -65,10 +65,16 @@
 }
 
 @media (max-width: 800px) {
+<<<<<<< Updated upstream
   .hstack {
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
+=======
+  .weatherInfo {
+    margin-top: 50px;
+    margin-bottom: 90px;
+>>>>>>> Stashed changes
   }
   .tab {
     padding: 0 8%;
