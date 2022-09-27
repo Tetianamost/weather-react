@@ -45,7 +45,7 @@ export default function SearchForm(props) {
             onSubmit={handleSubmit}
           >
             <input
-              className="form-control p-1 p-md-2 ml-5 inner-input"
+              className="form-control  p-2 ml-5 inner-input"
               type="search"
               autoFocus="on"
               autoComplete="off"
@@ -62,7 +62,7 @@ export default function SearchForm(props) {
             </button>
             <button
               type="button"
-              className="btn btn-info btn-sm-sm p-1 p-md-2 shadow-sm current mb-2 mx-1 mb-md-0"
+              className="btn btn-info btn-sm-sm p-2 shadow-sm current mb-2 mx-1 mb-md-0"
             >
               Current
             </button>
