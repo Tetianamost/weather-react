@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "./WeatherForecast.css";
 import WeatherForecastDay from "./WeatherForecastDay";
+import Carousel from "./Carousel";
 
 export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
@@ -34,6 +35,10 @@ export default function WeatherForecast(props) {
               return (
                 <div className="col justify-content-space-between tab-forecast">
                   <WeatherForecastDay
+                    data={dailyForecast}
+                    icon={`media/icons/${icon}.svg`}
+                  />
+                  <Carousel
                     data={dailyForecast}
                     icon={`media/icons/${icon}.svg`}
                   />
