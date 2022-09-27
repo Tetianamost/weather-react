@@ -12,7 +12,6 @@ export default function WeatherForecast(props) {
   }, [props.coord]);
 
   function handleResponse(response) {
-    console.log(response.data);
     setForecast(response.data.daily);
     setLoaded(true);
   }
@@ -30,10 +29,14 @@ export default function WeatherForecast(props) {
       <div className="WeatherForecast">
         <div className="row mt-4">
           {forecast.map(function (dailyForecast, index) {
+            let icon = dailyForecast.weather[0].icon;
             if (index < 4) {
               return (
                 <div className="col justify-content-space-between tab-forecast">
-                  <WeatherForecastDay data={dailyForecast} icon={props.icon} />
+                  <WeatherForecastDay
+                    data={dailyForecast}
+                    icon={`media/icons/${icon}.svg`}
+                  />
                 </div>
               );
             } else {
