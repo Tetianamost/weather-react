@@ -11,12 +11,13 @@
   transition: all 150ms solid;
 }
 .search-button:focus {
-  background-color: #fafafa;
+  background-color: #d6f4d9;
   color: #38729f;
   border-color: #8bb0c0;
 }
 .search-button:hover {
-  background: #718393;
+  background: #347474;
+  color: #ebf3f9;
   transition: all 150ms solid;
 }
 
@@ -26,7 +27,7 @@
   transition: all 150ms solid;
 }
 .current:focus {
-  background-color: #fafafa;
+  background-color: #d6f4d9;
   color: #38729f;
 }
 .current:hover {
