@@ -29,10 +29,10 @@ export default function WeatherInfo(props) {
         <div className="col weather-details d-flex m-md-5 m-sm-3">
           <ul>
             <li>
-              <i class="fa-solid fa-arrow-down"> </i>&nbsp; {tempMin}°
+              <i className="fa-solid fa-arrow-down"> </i>&nbsp; {tempMin}°
             </li>
             <li>
-              <i class="fa-solid fa-arrow-up"> </i>&nbsp; {tempMax}°
+              <i className="fa-solid fa-arrow-up"> </i>&nbsp; {tempMax}°
             </li>
             <li>
               <i className="fa-solid fa-temperature-half"> </i>

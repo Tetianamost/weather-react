@@ -16,22 +16,20 @@
   margin-left: 25px;
   margin-right: 5px;
 }
-@media (max-width: 800px) {
+/* @media (max-width: 900px) {
   .WeatherForecast {
     display: flex;
     justify-content: space-evenly;
     color: bisque;
   }
-  .WeatherForecast-temp {
+  /* .WeatherForecast-temp {
     font-size: smaller;
   }
   .icon-sm {
     width: 41px;
     height: 41px;
-  }
-  .tab-forecast {
+  } */
+/* .tab-forecast {
     background-color: rgba(4, 43, 58, 0.5);
-    border-radius: 40%;
-    margin-left: 3px;
-  }
-}
+    /* border-radius: 40%;
+    margin-left: 3px; */

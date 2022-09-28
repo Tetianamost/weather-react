@@ -28,7 +28,7 @@ export default function WeatherForecast(props) {
     return (
       <div className="WeatherForecast">
         <div className="row mt-4">
-          <div className="col justify-content-space-between tab-forecast">
+          <div className="col tab-forecast">
             <Carousel forecast={forecast} />
           </div>
         </div>

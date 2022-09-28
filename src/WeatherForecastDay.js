@@ -16,8 +16,9 @@ export default function WeatherForecastDay(props) {
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     return days[day];
   }
+
   return (
-    <div className="WeatherForecastDay">
+    <div className="col WeatherForecastDay">
       <div className="WeatherForecast-day">{day()}</div>
       <img className="icon-sm" src={props.icon} alt={props.data.description} />
       <div className="WeatherForecast-temp">
