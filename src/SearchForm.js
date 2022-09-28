@@ -74,17 +74,17 @@ export default function SearchForm(props) {
 
             <button
               type="submit"
-              className="btn btn-outline-primary p-2 p-md-2 shadow-sm mb-2 mb-md-0 mx-1 search-button"
+              className="btn btn-outline-primary p-2 shadow-sm mb-2 mb-md-0 mx-1 search-button"
               onSubmit={handleSubmit}
             >
-              <i className="fa-solid fa-magnifying-glass"></i>
+              <i className="fa-solid fa-location-arrow fa-lg"></i>
             </button>
             <button
               type="button"
               className="btn btn-info btn-sm-sm p-2 shadow-sm current mb-2 mx-1 mb-md-0"
               onClick={getPosition}
             >
-              <i className="fa-solid fa-location-arrow"></i>
+              <i className="fa-solid fa-location-pin fa-lg"></i>
             </button>
           </form>
           <WeatherInfo data={weather} />

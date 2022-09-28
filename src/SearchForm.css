@@ -5,10 +5,9 @@
 }
 
 .search-button {
-  display: flex;
-  color: #38729f;
+  color: #081620;
   border-color: #8bb0c0;
-  background-color: #fafafa;
+  background-color: #88f9ea;
   transition: all 150ms solid;
 }
 .search-button:focus {
@@ -27,12 +26,13 @@
   transition: all 150ms solid;
 }
 .current:focus {
-  background: #1fc0a5;
-  color: black;
+  background-color: #fafafa;
+  color: #38729f;
 }
 .current:hover {
   transition: all 150ms solid;
   background: #347474;
+  color: #ebf3f9;
 }
 .searchWeather {
   color: #f0fbff;
@@ -51,8 +51,8 @@
 }
 
 .icon {
-  width: 81px;
-  height: 81px;
+  width: 91px;
+  height: 91px;
 }
 .currentTemp {
   font-size: 50px;

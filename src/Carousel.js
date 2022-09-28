@@ -27,7 +27,7 @@ export default function SlideDays(props) {
           let icon = dailyForecast.weather[0].icon;
           if (index < 7) {
             return (
-              <Carousel.Item>
+              <Carousel.Item key={index}>
                 <WeatherForecastDay
                   data={dailyForecast}
                   icon={`media/icons/${icon}.svg`}
