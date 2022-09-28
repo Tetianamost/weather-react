@@ -29,13 +29,6 @@ li::first-letter {
   background-position: center center;
 }
 
-.weather-forecast-date {
-  opacity: 0.8;
-}
-.weather-forecast-temp-min {
-  opacity: 0.8;
-}
-
 .alert {
   color: white;
   font-size: 15px;

@@ -21,7 +21,7 @@ export default function FormattedDate(props) {
   return (
     <ul className="text-center FormattedDate">
       <li className="last-updated"> Last updated: </li>
-      <li>
+      <li className="date">
         {day}, {hours}:{minutes}
       </li>
     </ul>

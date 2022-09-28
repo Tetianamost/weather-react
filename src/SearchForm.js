@@ -60,7 +60,7 @@ export default function SearchForm(props) {
         <div className="searchWeather row">
           <FormattedDate date={weather.date} />
           <form
-            className=" hstack gap-2 px-5 enter-city mt-4 "
+            className="hstack  px-5 enter-city mt-4 "
             onSubmit={handleSubmit}
           >
             <input
@@ -74,7 +74,7 @@ export default function SearchForm(props) {
 
             <button
               type="submit"
-              className="btn btn-outline-primary p-1 p-md-2 shadow-sm mb-2 mb-md-0 mx-1 search-button"
+              className="btn btn-outline-primary p-2 p-md-2 shadow-sm mb-2 mb-md-0 mx-1 search-button"
               onSubmit={handleSubmit}
             >
               <i className="fa-solid fa-magnifying-glass"></i>
