@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "./WeatherForecast.css";
-import WeatherForecastDay from "./WeatherForecastDay";
+
 import Carousel from "./Carousel";
 
 export default function WeatherForecast(props) {
@@ -20,7 +20,6 @@ export default function WeatherForecast(props) {
     let apiKey = "082d3d02ffdb12f2fd9b259e2ced1d0d";
     let lon = props.coord.lon;
     let lat = props.coord.lat;
-
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -29,25 +28,9 @@ export default function WeatherForecast(props) {
     return (
       <div className="WeatherForecast">
         <div className="row mt-4">
-          {forecast.map(function (dailyForecast, index) {
-            let icon = dailyForecast.weather[0].icon;
-            if (index < 4) {
-              return (
-                <div className="col justify-content-space-between tab-forecast">
-                  <WeatherForecastDay
-                    data={dailyForecast}
-                    icon={`media/icons/${icon}.svg`}
-                  />
-                  <Carousel
-                    data={dailyForecast}
-                    icon={`media/icons/${icon}.svg`}
-                  />
-                </div>
-              );
-            } else {
-              return null;
-            }
-          })}
+          <div className="col justify-content-space-between tab-forecast">
+            <Carousel forecast={forecast} />
+          </div>
         </div>
       </div>
     );

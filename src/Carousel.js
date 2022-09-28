@@ -1,9 +1,9 @@
 import Carousel from "react-bootstrap/Carousel";
 import React, { useState } from "react";
+import WeatherForecastDay from "./WeatherForecastDay";
 
 export default function SlideDays(props) {
   const [index, setIndex] = useState(0);
-  let day = [props.data, props.icon];
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
@@ -23,7 +23,21 @@ export default function SlideDays(props) {
           <span aria-hidden="true" className="carousel-control-prev-icon" />
         }
       >
-        <Carousel.Item>{day}</Carousel.Item>
+        {props.forecast.map(function (dailyForecast, index) {
+          let icon = dailyForecast.weather[0].icon;
+          if (index < 7) {
+            return (
+              <Carousel.Item>
+                <WeatherForecastDay
+                  data={dailyForecast}
+                  icon={`media/icons/${icon}.svg`}
+                />
+              </Carousel.Item>
+            );
+          } else {
+            return null;
+          }
+        })}
       </Carousel>
     </div>
   );
