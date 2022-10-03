@@ -77,7 +77,7 @@ export default function SearchForm(props) {
               className="btn btn-outline-primary p-2 shadow-sm mb-2 mb-md-0 mx-1 search-button"
               onSubmit={handleSubmit}
             >
-              <i class="fa-solid fa-location-arrow fa-lg"></i>
+              <i className="fa-solid fa-location-arrow fa-lg"></i>
             </button>
             <button
               type="button"

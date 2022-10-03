@@ -9,8 +9,8 @@ export default function WeatherInfo(props) {
   return (
     <div>
       <div className=" d-flex">
-        <ul className="tab card my-3">
-          <li className="h3">{props.data.city}</li>
+        <ul className="tab card text-center my-3">
+          <li className="h1">{props.data.city}</li>
           <li className="h6">{props.data.description}</li>
         </ul>
       </div>
@@ -29,10 +29,10 @@ export default function WeatherInfo(props) {
         <div className="col weather-details d-flex m-md-5 m-sm-3">
           <ul>
             <li>
-              <i class="fa-solid fa-arrow-down"> </i>&nbsp; {tempMin}°
+              <i className="fa-solid fa-arrow-down"> </i>&nbsp; {tempMin}°
             </li>
             <li>
-              <i class="fa-solid fa-arrow-up"> </i>&nbsp; {tempMax}°
+              <i className="fa-solid fa-arrow-up"> </i>&nbsp; {tempMax}°
             </li>
             <li>
               <i className="fa-solid fa-temperature-half"> </i>

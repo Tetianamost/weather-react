@@ -46,7 +46,7 @@ li::first-letter {
 }
 @media (max-width: 800px) {
   body {
-    font-size: 19px;
+    font-size: 20px;
   }
   .main-box {
     width: 100%;
