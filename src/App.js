@@ -10,13 +10,20 @@ import Footer from "./Footer";
 function App() {
   return (
     <div className="App">
-      <StarSky>
-        <div className="container main-box background-images">
-          <SearchForm defaultCity="Denver" />
-        </div>
-        <Alerts />
-        <Footer />
-      </StarSky>
+      <StarSky
+        pageBackground={true}
+        style={{ opacity: 0.5 }}
+        shuffle={true}
+        frameRate={20}
+        className={("container", "main-box")}
+        starColor={(103, 245, 249)}
+        backgroundColor={[56, 40, 92]}
+      />
+      <div className="container main-box background-images">
+        <SearchForm defaultCity="Denver" />
+      </div>
+      <Alerts />
+      <Footer />
     </div>
   );
 }
