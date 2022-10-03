@@ -17,14 +17,11 @@ li::first-letter {
 
 .main-box,
 .background-images {
-  border: 1px solid linear-gradient(to top, #e5eef7, #d8e5f1, #dbe7f3, #b0dae9);
-  border-radius: 5px;
   max-width: 450%;
   width: 600px;
   height: 666px;
   margin: 0 auto;
   padding: 25px;
-  background: url("./media/bg/beach-clear-birds.jpg");
   background-size: auto 800px;
   background-repeat: no-repeat;
   background-position: center center;
