@@ -16,7 +16,7 @@ function App() {
           pageBackground={true}
           style={{ opacity: 0.5 }}
           shuffle={true}
-          frameRate={60}
+          frameRate={20}
           className={("container", "main-box")}
           starColor={(103, 245, 249)}
           backgroundColor={[56, 40, 92]}
