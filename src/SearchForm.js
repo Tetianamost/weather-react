@@ -59,12 +59,9 @@ export default function SearchForm(props) {
       <div>
         <div className="searchWeather row">
           <FormattedDate date={weather.date} />
-          <form
-            className=" hstack gap-2 px-5 enter-city mt-4 "
-            onSubmit={handleSubmit}
-          >
+          <form className="hstack gap-1 mt-4" onSubmit={handleSubmit}>
             <input
-              className="form-control  p-2 ml-5 inner-input"
+              className="form-control rounded-pill p-2 "
               type="search"
               autoFocus="on"
               autoComplete="off"
@@ -74,14 +71,14 @@ export default function SearchForm(props) {
 
             <button
               type="submit"
-              className="btn btn-outline-primary p-2 shadow-sm mb-2 mb-md-0 mx-1 search-button"
+              className="btn btn-outline-primary p-2 shadow-sm  search-button"
               onSubmit={handleSubmit}
             >
               <i className="fa-solid fa-location-arrow fa-lg"></i>
             </button>
             <button
               type="button"
-              className="btn btn-info btn-sm-sm p-2 shadow-sm current mb-2 mx-1 mb-md-0"
+              className="btn btn-info btn-sm-sm p-2 shadow-sm current "
               onClick={getPosition}
             >
               <i className="fa-solid fa-location-pin fa-lg"></i>
