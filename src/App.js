@@ -1,6 +1,5 @@
-import React, { startTransition } from "react";
+import React from "react";
 import StarSky from "react-star-sky";
-import "react-star-sky/dist/index.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
