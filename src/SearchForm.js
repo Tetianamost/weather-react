@@ -84,7 +84,7 @@ export default function SearchForm(props) {
               className="btn btn-info btn-sm-sm p-2 shadow-sm current mb-2 mx-1 mb-md-0"
               onClick={getPosition}
             >
-              <i class="fa-solid fa-location-pin fa-lg"></i>
+              <i className="fa-solid fa-location-pin fa-lg"></i>
             </button>
           </form>
           <WeatherInfo data={weather} />

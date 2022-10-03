@@ -30,9 +30,12 @@ export default function WeatherForecast(props) {
         <div className="row mt-4">
           {forecast.map(function (dailyForecast, index) {
             let icon = dailyForecast.weather[0].icon;
-            if (index < 4) {
+            if (index < 5) {
               return (
-                <div className="col justify-content-space-between tab-forecast">
+                <div
+                  key={index}
+                  className="col-2 justify-content-space-evenly tab-forecast"
+                >
                   <WeatherForecastDay
                     data={dailyForecast}
                     icon={`media/icons/${icon}.svg`}
