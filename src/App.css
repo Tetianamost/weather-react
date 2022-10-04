@@ -22,6 +22,10 @@ li {
 }
 a {
   text-decoration: none;
+  color: rgb(255, 159, 191);
+}
+a:hover {
+  color: rgb(255, 185, 248);
 }
 li::first-letter {
   text-transform: capitalize;
@@ -41,25 +45,6 @@ li::first-letter {
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: auto 800px;
   background-position: center center;
-}
-
-.alert {
-  color: white;
-  font-size: 15px;
-  text-align: center;
-  padding: 0px auto;
-  margin: 10px auto;
-  text-transform: uppercase;
-  max-width: 600px;
-}
-.alert-more-info {
-  text-align: center;
-  border-radius: 5px;
-  color: white;
-  padding: 5px;
-  margin: 0 auto;
-  text-transform: uppercase;
-  max-width: 600px;
 }
 
 @media (max-width: 800px) {
