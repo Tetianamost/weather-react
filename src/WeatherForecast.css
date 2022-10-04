@@ -15,9 +15,6 @@
   border-radius: 40%;
 }
 @media (max-width: 900px) {
-  .WeatherForecast-temp {
-    font-size: smaller;
-  }
   .WeatherForecast-temp-min {
     margin-left: 2px;
   }
