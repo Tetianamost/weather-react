@@ -67,7 +67,7 @@ export default function SearchForm(props) {
                 scale: 0.9,
                 transition: { duration: 1 },
               }}
-              whileTap={{ scale: 1.2 }}
+              whileTap={{ scale: 1.2, transition: { duration: 1 } }}
               className="form-control rounded-pill p-2 "
               type="search"
               autoComplete="off"
