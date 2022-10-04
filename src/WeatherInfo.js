@@ -10,7 +10,7 @@ export default function WeatherInfo(props) {
     <div>
       <div className="d-flex">
         <ul className="tab card text-center my-3">
-          <li className="h1 card-header">{props.data.city}</li>
+          <li className="h1">{props.data.city}</li>
           <li className="h6 card-text">{props.data.description}</li>
         </ul>
       </div>
