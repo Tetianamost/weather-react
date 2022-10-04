@@ -20,14 +20,11 @@ li::first-letter {
   height: 666px;
   margin: 0 auto;
   padding: 25px;
-  background: url("./media/bg/beach-clear-birds.jpg");
   background-image: url("./media/bg/big-moon.jpg"),
     url("./media/bg/moon-evening.png"),
     linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: bottom right, left, right;
   background-size: auto 800px;
-  background-repeat: no-repeat;
   background-position: center center;
 }
 
