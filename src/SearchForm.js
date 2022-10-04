@@ -90,7 +90,7 @@ export default function SearchForm(props) {
 
             <motion.button
               whileHover={{
-                scale: 0.9,
+                scale: 0.8,
                 transition: { duration: 1 },
               }}
               whileTap={{ scale: 1 }}

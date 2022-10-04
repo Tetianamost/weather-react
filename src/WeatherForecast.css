@@ -22,11 +22,14 @@
   .WeatherForecast-temp {
     font-size: smaller;
   }
+  .WeatherForecast-temp-min {
+    margin-left: 2px;
+  }
   .icon-sm {
     width: 35px;
     height: 35px;
   }
   .tab-forecast {
-    font-size: smaller;
+    font-size: 10px;
   }
 }
