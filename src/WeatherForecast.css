@@ -13,8 +13,6 @@
 .tab-forecast {
   background-color: rgba(4, 43, 58, 0.776);
   border-radius: 40%;
-  margin-left: 7px;
-  margin-right: 7px;
 }
 @media (max-width: 900px) {
   .WeatherForecast {
@@ -30,9 +28,5 @@
   }
   .tab-forecast {
     font-size: smaller;
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: 5px;
-    margin-right: 5px;
   }
 }

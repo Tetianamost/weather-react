@@ -4,6 +4,7 @@ import "./SearchForm.css";
 import FormattedDate from "./FormattedDate";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
+import { motion } from "framer-motion";
 
 export default function SearchForm(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -59,31 +60,48 @@ export default function SearchForm(props) {
       <div>
         <div className="searchWeather row">
           <FormattedDate date={weather.date} />
+
           <form className="hstack gap-1 mt-4" onSubmit={handleSubmit}>
-            <input
+            <motion.input
+              whileHover={{
+                scale: 0.9,
+                transition: { duration: 1 },
+              }}
+              whileTap={{ scale: 1.1 }}
               className="form-control rounded-pill p-2 "
               type="search"
-              autoFocus="on"
               autoComplete="off"
               placeholder="Enter a city"
               onChange={updateCity}
             />
 
-            <button
+            <motion.button
+              whileHover={{
+                scale: 0.9,
+                transition: { duration: 1 },
+              }}
+              whileTap={{ scale: 1 }}
               type="submit"
               className="btn btn-outline-primary p-2 shadow-sm  search-button"
               onSubmit={handleSubmit}
             >
               <i className="fa-solid fa-location-arrow fa-lg"></i>
-            </button>
-            <button
+            </motion.button>
+
+            <motion.button
+              whileHover={{
+                scale: 0.9,
+                transition: { duration: 1 },
+              }}
+              whileTap={{ scale: 1 }}
               type="button"
               className="btn btn-info btn-sm-sm p-2 shadow-sm current "
               onClick={getPosition}
             >
               <i className="fa-solid fa-location-pin fa-lg"></i>
-            </button>
+            </motion.button>
           </form>
+
           <WeatherInfo data={weather} />
         </div>
         <div>

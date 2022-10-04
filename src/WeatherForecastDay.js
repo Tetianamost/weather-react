@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function WeatherForecastDay(props) {
   function maxTemp() {
@@ -17,13 +18,21 @@ export default function WeatherForecastDay(props) {
     return days[day];
   }
   return (
-    <div className="WeatherForecastDay">
+    <motion.div
+      whileHover={{
+        scale: 1.2,
+        transition: { duration: 0.5 },
+      }}
+      drag="x"
+      dragConstraints={{ left: 5, right: 5 }}
+      className="WeatherForecastDay tab-forecast  justify-content-space-evenly "
+    >
       <div className="WeatherForecast-day">{day()}</div>
       <img className="icon-sm" src={props.icon} alt={props.data.description} />
       <div className="WeatherForecast-temp">
         <span className="WeatherForecast-temp-max">{maxTemp()}°</span>
         <span className="WeatherForecast-temp-min">{minTemp()}°</span>
       </div>
-    </div>
+    </motion.div>
   );
 }

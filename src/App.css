@@ -46,6 +46,7 @@ li::first-letter {
   text-transform: uppercase;
   max-width: 600px;
 }
+
 @media (max-width: 800px) {
   body {
     font-size: 20px;

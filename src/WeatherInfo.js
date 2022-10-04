@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function WeatherInfo(props) {
   let tempMax = Math.round(props.data.tempMax);
@@ -9,13 +10,29 @@ export default function WeatherInfo(props) {
   return (
     <div>
       <div className="d-flex">
-        <ul className="tab text-center my-3">
+        <motion.ul
+          whileHover={{
+            scale: 1.2,
+            transition: { duration: 0.5 },
+          }}
+          drag="x"
+          dragConstraints={{ left: 20, right: 20 }}
+          className="tab text-center my-3"
+        >
           <li className="h1">{props.data.city}</li>
           <li className="h6">{props.data.description}</li>
-        </ul>
+        </motion.ul>
       </div>
       <div className="row weatherInfo">
-        <div className="col d-flex align-items-center">
+        <motion.div
+          drag="x"
+          dragConstraints={{ left: 20, right: 20 }}
+          whileHover={{
+            scale: 1.2,
+            transition: { duration: 0.5 },
+          }}
+          className="col d-flex align-items-center"
+        >
           <img
             className="icon ms-3"
             src={props.data.icon}
@@ -25,9 +42,16 @@ export default function WeatherInfo(props) {
             {Math.round(props.data.temperature)}
           </strong>{" "}
           <span className="units">°C</span>
-        </div>
+        </motion.div>
         <div className="col weather-details d-flex m-md-5 m-sm-3">
-          <ul>
+          <motion.ul
+            whileHover={{
+              scale: 1.2,
+              transition: { duration: 0.5 },
+            }}
+            drag="x"
+            dragConstraints={{ left: 20, right: 20 }}
+          >
             <li>
               <i className="fa-solid fa-arrow-down"> </i>&nbsp; {tempMin}°
             </li>
@@ -45,7 +69,7 @@ export default function WeatherInfo(props) {
             <li>
               <i className="fa-solid fa-droplet"></i> &nbsp;{humidity}%
             </li>
-          </ul>
+          </motion.ul>
         </div>
       </div>
     </div>
