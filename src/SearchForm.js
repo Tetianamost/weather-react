@@ -80,7 +80,7 @@ export default function SearchForm(props) {
                 scale: 0.9,
                 transition: { duration: 1 },
               }}
-              whileTap={{ scale: 1 }}
+              whileTap={{ scale: 1.5 }}
               type="submit"
               className="btn btn-outline-primary p-2 shadow-sm  search-button"
               onSubmit={handleSubmit}
