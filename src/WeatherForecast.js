@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "./WeatherForecast.css";
 import WeatherForecastDay from "./WeatherForecastDay";
+import { motion } from "framer-motion";
 
 export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
@@ -26,7 +27,11 @@ export default function WeatherForecast(props) {
 
   if (loaded) {
     return (
-      <div className="WeatherForecast">
+      <motion.div
+        drag="x"
+        dragConstraints={{ left: 5, right: 5 }}
+        className="WeatherForecast"
+      >
         <div className="row mt-4">
           {forecast.map(function (dailyForecast, index) {
             let icon = dailyForecast.weather[0].icon;
@@ -44,7 +49,7 @@ export default function WeatherForecast(props) {
             }
           })}
         </div>
-      </div>
+      </motion.div>
     );
   } else {
     load();
