@@ -11,16 +11,15 @@
   height: 51px;
 }
 .tab-forecast {
-  background-color: rgba(4, 43, 58, 0.5);
+  background-color: rgba(4, 43, 58, 0.776);
   border-radius: 40%;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 7px;
+  margin-right: 7px;
 }
 @media (max-width: 900px) {
   .WeatherForecast {
     display: flex;
     justify-content: space-evenly;
-    color: bisque;
   }
   .WeatherForecast-temp {
     font-size: smaller;
@@ -30,8 +29,6 @@
     height: 35px;
   }
   .tab-forecast {
-    background-color: rgba(4, 43, 58, 0.5);
-    border-radius: 40%;
     font-size: smaller;
     display: flex;
     justify-content: space-evenly;

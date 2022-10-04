@@ -48,11 +48,11 @@
 }
 .weather-details {
   font-weight: bold;
-  color: rgb(216, 255, 119);
+  color: rgb(137, 11, 125);
 }
 
 .tab {
-  background-color: rgba(4, 43, 58, 0.5);
+  background-color: rgba(4, 38, 58, 0.688);
   border-radius: 40%;
   padding: 0 5%;
   margin: auto;
@@ -64,14 +64,14 @@
 }
 .currentTemp {
   font-size: 50px;
-  color: #1f5e8f;
+  color: #062a46;
   font-weight: bolder;
 }
 .units {
   position: relative;
   top: -7px;
   left: -11px;
-  color: #1f5e8f;
+  color: #051623;
 }
 
 @media (max-width: 800px) {

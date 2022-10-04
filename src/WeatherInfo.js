@@ -8,10 +8,10 @@ export default function WeatherInfo(props) {
   let wind = Math.round(props.data.wind);
   return (
     <div>
-      <div className=" d-flex">
+      <div className="d-flex">
         <ul className="tab card text-center my-3">
-          <li className="h1">{props.data.city}</li>
-          <li className="h6">{props.data.description}</li>
+          <li className="h1 card-header">{props.data.city}</li>
+          <li className="h6 card-text">{props.data.description}</li>
         </ul>
       </div>
       <div className="row weatherInfo">
