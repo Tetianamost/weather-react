@@ -15,10 +15,6 @@
   border-radius: 40%;
 }
 @media (max-width: 900px) {
-  .WeatherForecast {
-    display: flex;
-    justify-content: space-evenly;
-  }
   .WeatherForecast-temp {
     font-size: smaller;
   }
