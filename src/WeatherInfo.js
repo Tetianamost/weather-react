@@ -45,7 +45,7 @@ export default function WeatherInfo(props) {
               src={props.data.icon}
               alt={props.data.description}
             />
-            <strong className="m-3 currentTemp h1">
+            <strong className="my-3 currentTemp h1">
               {Math.round(props.data.temperature)}
             </strong>{" "}
             <motion.a
@@ -53,6 +53,7 @@ export default function WeatherInfo(props) {
               dragConstraints={{ left: 20, right: 20 }}
               whileHover={{
                 scale: 1.3,
+                x: 10,
                 transition: { duration: 0.5 },
               }}
               href="/"
@@ -117,7 +118,7 @@ export default function WeatherInfo(props) {
               src={props.data.icon}
               alt={props.data.description}
             />
-            <strong className="m-3 currentTemp h1">
+            <strong className="my-3 currentTemp h1">
               {convertFahrenheit(props.data.temperature)}
             </strong>{" "}
             <motion.a
@@ -125,6 +126,7 @@ export default function WeatherInfo(props) {
               dragConstraints={{ left: 20, right: 20 }}
               whileHover={{
                 scale: 1.3,
+                x: 10,
                 transition: { duration: 0.5 },
               }}
               href="/"

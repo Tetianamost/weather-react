@@ -67,11 +67,19 @@
   color: #062a46;
   font-weight: bolder;
 }
+
+.units:focus {
+  color: #051623;
+}
 .units {
   position: relative;
   top: -10px;
-
   color: #051623;
+}
+.units:hover {
+  position: relative;
+  top: -10px;
+  color: rgb(127, 105, 173);
 }
 
 @media (max-width: 900px) {
