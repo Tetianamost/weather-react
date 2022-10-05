@@ -69,12 +69,12 @@
 }
 .units {
   position: relative;
-  top: -7px;
-  left: -11px;
+  top: -10px;
+
   color: #051623;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .searchWeather {
     margin-bottom: 40px;
   }

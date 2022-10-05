@@ -39,15 +39,7 @@ export default function WeatherInfo(props) {
           </motion.ul>
         </div>
         <div className="row weatherInfo">
-          <motion.div
-            drag="x"
-            dragConstraints={{ left: 20, right: 20 }}
-            whileHover={{
-              scale: 1.2,
-              transition: { duration: 0.5 },
-            }}
-            className="col d-flex align-items-center"
-          >
+          <motion.div className="col d-flex align-items-center">
             <img
               className="icon ms-3"
               src={props.data.icon}
@@ -56,13 +48,21 @@ export default function WeatherInfo(props) {
             <strong className="m-3 currentTemp h1">
               {Math.round(props.data.temperature)}
             </strong>{" "}
-            <span className="units">°C</span>
-            <a href="/" onClick={showFahrenheit} className="units">
-              {" "}
-              | °F
-            </a>
+            <motion.a
+              drag="x"
+              dragConstraints={{ left: 20, right: 20 }}
+              whileHover={{
+                scale: 1.3,
+                transition: { duration: 0.5 },
+              }}
+              href="/"
+              onClick={showFahrenheit}
+              className="units"
+            >
+              <i class="fa-solid fa-circle-dot">&nbsp;C</i>
+            </motion.a>
           </motion.div>
-          <div className="col weather-details d-flex m-md-5 m-sm-3">
+          <div className="col weather-details d-flex justify-content-end m-md-5 m-sm-3">
             <motion.ul
               whileHover={{
                 scale: 1.2,
@@ -111,15 +111,7 @@ export default function WeatherInfo(props) {
           </motion.ul>
         </div>
         <div className="row weatherInfo">
-          <motion.div
-            drag="x"
-            dragConstraints={{ left: 20, right: 20 }}
-            whileHover={{
-              scale: 1.2,
-              transition: { duration: 0.5 },
-            }}
-            className="col d-flex align-items-center"
-          >
+          <motion.div className="col d-flex align-items-center">
             <img
               className="icon ms-3"
               src={props.data.icon}
@@ -128,13 +120,21 @@ export default function WeatherInfo(props) {
             <strong className="m-3 currentTemp h1">
               {convertFahrenheit(props.data.temperature)}
             </strong>{" "}
-            <a href="/" onClick={showCelsius} className="unit">
-              {" "}
-              | °C
-            </a>
-            <span className="units">°F</span>
+            <motion.a
+              drag="x"
+              dragConstraints={{ left: 20, right: 20 }}
+              whileHover={{
+                scale: 1.3,
+                transition: { duration: 0.5 },
+              }}
+              href="/"
+              onClick={showCelsius}
+              className="units"
+            >
+              <i class="fa-solid fa-circle-dot">&nbsp;F</i>
+            </motion.a>{" "}
           </motion.div>
-          <div className="col weather-details d-flex m-md-5 m-sm-3">
+          <div className="col weather-details d-flex justify-content-end m-md-5 m-sm-3">
             <motion.ul
               whileHover={{
                 scale: 1.2,
