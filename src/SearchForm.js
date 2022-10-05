@@ -94,7 +94,7 @@ export default function SearchForm(props) {
                 scale: 0.8,
                 transition: { duration: 1 },
               }}
-              whileTap={{ scale: 1.5 }}
+              whileTap={{ scale: 1.3 }}
               type="button"
               className="btn btn-info btn-sm-sm p-2 shadow-sm current "
               onClick={getPosition}
