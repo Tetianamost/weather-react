@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 export default function SearchForm(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weather, setWeather] = useState({ loaded: false });
+  const [unit, setUnit] = useState("celsius");
   function showWeather(response) {
     setWeather({
       loaded: true,
@@ -101,10 +102,10 @@ export default function SearchForm(props) {
               <i className="fa-solid fa-location-pin fa-lg"></i>
             </motion.button>
           </form>
-          <WeatherInfo data={weather} />
+          <WeatherInfo data={weather} unit={unit} setUnit={setUnit} />
         </div>
         <div>
-          <WeatherForecast coord={weather.coord} />
+          <WeatherForecast coord={weather.coord} unit={unit} />
         </div>
       </div>
     );

@@ -12,6 +12,11 @@ export default function WeatherForecast(props) {
     setLoaded(false);
   }, [props.coord]);
 
+  let units = "imperial";
+  if (props.unit === "celsius") {
+    units = "metric";
+  }
+
   function handleResponse(response) {
     setForecast(response.data.daily);
     setLoaded(true);
@@ -20,7 +25,6 @@ export default function WeatherForecast(props) {
     let apiKey = "40b745c14eadad7b7c4e6e4bf3b70103";
     let lon = props.coord.lon;
     let lat = props.coord.lat;
-
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -41,6 +45,7 @@ export default function WeatherForecast(props) {
                   <WeatherForecastDay
                     data={dailyForecast}
                     icon={`media/icons/${icon}.svg`}
+                    units={units}
                   />
                 </div>
               );
