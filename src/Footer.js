@@ -6,6 +6,7 @@ export default function Footer() {
     <div className="Footer">
       <img className="my-image" src={Image} alt="tetiana_mostova" />
       <span className="coded-by">
+        ©&nbsp;
         <a
           href="https://github.com/Tetianamost/weather-react"
           target="_blank"
@@ -13,7 +14,7 @@ export default function Footer() {
         >
           Coded&nbsp;
         </a>
-        by Tetiana Mostova
+        by Tetiana Mostova. All rights reserved.
       </span>
     </div>
   );
