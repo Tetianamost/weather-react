@@ -39,7 +39,7 @@ export default function WeatherForecast(props) {
         <div className="row mt-4">
           {forecast.map(function (dailyForecast, index) {
             let icon = dailyForecast.weather[0].icon;
-            if (index < 6) {
+            if (index > 0 && index < 7) {
               return (
                 <div key={index} className="col-2">
                   <WeatherForecastDay
