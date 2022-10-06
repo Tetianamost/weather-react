@@ -21,6 +21,9 @@ export default function WeatherInfo(props) {
   const convertFahrenheit = (temp) => {
     return Math.round((temp * 9) / 5 + 32);
   };
+  const convertKmph = (wind) => {
+    return Math.round(wind * 1.61);
+  };
   if (props.unit === "celsius") {
     return (
       <div>
@@ -158,7 +161,8 @@ export default function WeatherInfo(props) {
                 &nbsp; {convertFahrenheit(feels)}°
               </li>
               <li>
-                <i className="fa-solid fa-wind"> </i>&nbsp; {wind} mph
+                <i className="fa-solid fa-wind"> </i>&nbsp; {convertKmph(wind)}{" "}
+                kmph
               </li>
 
               <li>
