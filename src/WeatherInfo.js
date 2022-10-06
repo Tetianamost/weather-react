@@ -18,12 +18,10 @@ export default function WeatherInfo(props) {
     props.setUnit("fahrenheit");
   };
 
-  const convertFahrenheit = (temp) => {
-    return Math.round((temp * 9) / 5 + 32);
-  };
-  const convertKmph = (wind) => {
-    return Math.round(wind * 1.61);
-  };
+  const convertFahrenheit = (temp) => Math.round((temp * 9) / 5 + 32);
+
+  const convertKmph = (wind) => Math.round(wind * 1.61);
+
   if (props.unit === "celsius") {
     return (
       <div>
