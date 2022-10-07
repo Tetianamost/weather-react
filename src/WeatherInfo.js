@@ -84,7 +84,8 @@ export default function WeatherInfo(props) {
                 &nbsp; {feels}°
               </li>
               <li>
-                <i className="fa-solid fa-wind"> </i>&nbsp; {wind} mph
+                <i className="fa-solid fa-wind"> </i>&nbsp; {convertKmph(wind)}{" "}
+                kmph
               </li>
 
               <li>
@@ -159,8 +160,7 @@ export default function WeatherInfo(props) {
                 &nbsp; {convertFahrenheit(feels)}°
               </li>
               <li>
-                <i className="fa-solid fa-wind"> </i>&nbsp; {convertKmph(wind)}{" "}
-                kmph
+                <i className="fa-solid fa-wind"> </i>&nbsp; {wind} mph
               </li>
 
               <li>
