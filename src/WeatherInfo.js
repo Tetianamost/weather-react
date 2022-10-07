@@ -84,7 +84,7 @@ export default function WeatherInfo(props) {
                 &nbsp; {feels}°
               </li>
               <li>
-                <i className="fa-solid fa-wind"> </i>&nbsp; {wind}&nbsp; kph
+                <i className="fa-solid fa-wind"> </i>&nbsp; {wind}&nbsp;kph
               </li>
 
               <li>
